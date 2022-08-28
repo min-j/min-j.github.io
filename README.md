@@ -1,6 +1,6 @@
 ## About
 
-Using my knowledge on HTML, CSS, JS, Bootstrap, and a template from DesignStub, this is my resume website. Open it with min-j.github.io.
+Using my knowledge on HTML, CSS, JS, Bootstrap, and a template from DesignStub, this is my resume website. View it at jonathanmin.com
 
 ## Copyright and License
 
