@@ -56,7 +56,7 @@
             <section>
                 <h1>
                   <span>HELLO!</span>
-                  I am Jonathan Min <br> An aspiring <br> SOFTWARE ENGINEER <br> based in New York.
+                  I am Jonathan Min <br> A SENIOR SOFTWARE ENGINEER <br> based in New York.
                 </h1>
                 <!-- <ul class="ds-numbervalulist">
                   <li>
@@ -84,7 +84,8 @@
       <div class="container">
         <section>
             <h2 class="ds-heading">About Me</h2>
-            <p>A computer science senior at <a href="https://www.stonybrook.edu/" target="_blank" style="color: #6495ed;">Stony Brook University</a> and a current software engineer intern at <a href="https://ipvideocorp.com/" target="_blank" style="color: #6495ed;">IPVideo</a>. I am searching for a full time software engineer position to exercise my skill set and explore new things in the field.</p>
+            <!-- <p>A computer science senior at <a href="https://www.stonybrook.edu/" target="_blank" style="color: #6495ed;">Stony Brook University</a> and a current software engineer intern at <a href="https://ipvideocorp.com/" target="_blank" style="color: #6495ed;">IPVideo</a>. I am searching for a full time software engineer position to exercise my skill set and explore new things in the field.</p> -->
+             <p>A software engineer with a passion for building things that work and make people's lives easier. I've spent the last few years owning and building internal tools used by engineering and support teams, and I like tackling interesting and fun problems. Currently open to new opportunities.</p>
             <div class="ds-button-sec text-center">
                 <a href="assets/Jonathan Min Resume.pdf" download class="ds-button" target="_blank">Download Resume</a>
             </div>
@@ -100,28 +101,134 @@
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
              <h2 class="ds-heading">Core Skills</h2>
              <ul class="ds-skills-list">
-               <li>Java</li>
-               <li>Python</li>
-               <li>HTML</li>
-               <li>CSS</li>
                <li>JavaScript</li>
+               <li>TypeScript</li>
+               <li>Vue.js</li>
+               <li>Quasar</li>
+               <li>Vuex</li>
+               <li>React</li>
+               <li>REST APIs</li>
                <li>Git</li>
+               <li>Jira</li>
              </ul>
           </div>
           <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <h2 class="ds-heading">Other Skills</h2>
             <ul class="ds-skills-list">
+              <li>Python</li>
+              <li>Java</li>
               <li>React</li>
-              <li>Vue.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>Bootstrap</li>
+              <li>C#/.NET</li>
+              <li>AWS (Cognito, EKS, CLI)</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>GitHub Actions</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <!--  Skills -->
+
+  <!-- Experience -->
+   <div class="ds-experience-section">
+     <div class="container">
+        <h2 class="ds-heading">Work Experience</h2>
+        <ul class="timeline">
+          <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">JAN 2024 - Present</span>
+              <h3 class="ds-officename">Motorola Solutions (formerly IPVideo)</h3>
+              <span class="ds-department">Senior Software Engineer</span>
+              <!-- <p>Remote, New York</p> -->
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Served as the sole engineer on the internal support platform for 2+ years, owning all feature development, architectural decisions, and technical direction for a tool used daily by ~25 support and engineering staff.</li>
+                <li>Designed and shipped a domain migration tool that consolidated a complex, multi-step manual process into a single automated operation with dry-run pre-checks, phase-selectable execution, and per-phase logging, successfully transitioning 2000+ customer records to a new domain architecture.</li>
+                <li>Built a CSV ingestion framework across three data pipelines, users, devices, and sites, with dry-run previews, error tracking, and exportable logs, directly unblocking the onboarding of enterprise-scale customers and replacing a manual entry process that couldn't support that volume.</li>
+                <li>Proposed and led a codebase-wide dependency modernization effort, resolving compatibility issues and addressing security vulnerabilities flagged in audits, including a full Vuex to Pinia migration across 19 store modules.</li>
+                <li>Led full-stack API naming standardization across 250+ endpoints and 15+ microservices, resolving request convention inconsistencies to improve codebase maintainability and scalability. </li>
+                <li>Brought in by a separate team to deliver occupancy sensor views in their React/Next.js device management portal, surfacing multi-zone telemetry data ahead of a coordinated firmware release. </li>
+              </ul>
+            </section>
+          </li>
+
+          <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">May 2023 - JAN 2024</span>
+              <h3 class="ds-officename">Motorola Solutions (formerly IPVideo)</h3>
+              <span class="ds-department">Full Stack Developer</span>
+              <!-- <p>Remote, New York</p> -->
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Replaced per-device API status calls with a batched request strategy, eliminating sequential per-device load times, making status retrieval near-instantaneous, and resolving a data accuracy issue in a single architectural change.</li>
+                <li>Identified and resolved a sequential device command execution bottleneck, replacing it with parallel processing and achieving a 16x performance improvement across multi-device operations.</li>
+                <li>Built user management tooling covering sign-in history, temporary password provisioning, and user-domain assignment search, giving support the visibility and control they previously lacked to diagnose account issues and resolve login failures without engineering intervention.</li>
+                <li>Overhauled domain and device search in direct response to support-identified failures, adding MAC address lookup, fixing substring matching, and handling special characters, eliminating a class of recurring lookup failures that had blocked support staff from locating specific records.</li>
+                <li>Implemented MFA enforcement, configurable session timeouts, and activity tracking into the authentication layer using AWS Cognito, in direct response to security concerns flagged by the principal engineer, bringing the platform up to production security standards. </li>
+              </ul>
+            </section>
+          </li>
+
+          <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">JUNE 2022 - May 2023</span>
+              <h3 class="ds-officename">IPVideo</h3>
+              <span class="ds-department">Software Engineer Intern</span>
+              <!-- <p>Remote, New York</p> -->
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Owned and delivered a Vue 2 to Vue 3 and Quasar migration across a multi-module production codebase within two months, preserving full functionality and completing work originally scoped for a team. </li>
+                <li>Rapidly onboarded to Vue and an Agile workflow, contributing UI components and REST API integrations before taking full ownership of the codebase migration within the same internship.</li>
+              </ul>
+            </section>
+          </li>
+      
+          <!-- <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">JULY 2021 - MAY 2022</span>
+              <h3 class="ds-schoolname">Target</h3>
+              <span class="ds-department">General Merchandise Expert</span>
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Ensured sales floor was full, in stock, and accurately signed.</li>
+                <li>Executed pulls and restocked products in the backroom efficiently.</li>
+                <li>Provided service and a shopping experience to meet the needs of a guest.</li>
+              </ul>
+            </section>
+          </li> -->
+
+          <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">JULY 2020</span>
+              <h3 class="ds-officename">JP Morgan Chase & Co</h3>
+              <span class="ds-department">Fintech Focus Fellow</span>
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Built full-stack web applications using Flask, MongoDB, Python, HTML, and CSS; developed and iterated on MVPs culminating in a final project: a restaurant discovery app powered by the Yelp API, built with Flask and Bootstrap.</li>
+                <li>Used Git for version control and collaborative development across a team of fellows.</li>
+              </ul>
+            </section>
+          </li>
+
+          <!-- <li class="timeline-item mb-5">
+            <section>
+              <span class="ds-year">JUL 2019 - AUG 2019</span>
+              <h3 class="ds-officename">LIVunLTD</h3>
+              <span class="ds-department">Swim Instructor</span>
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Offered aquatic fitness and training for people of any age. </li>
+                <li>Prepared and delivered comprehensive fitness programming based on client’s goals. </li>
+                <li>Provided technical guidance and skill-focused lessons based on client’s abilities.</li>
+              </ul>
+              <span class="ds-department">Lifeguard</span>
+              <ul style="list-style-type: disc; margin-top: 15px;">
+                <li>Provided patron surveillance by monitoring activities in and around the water. </li>
+                <li>Maintained safe swimming environment by enforcing rules and regulations of the pool. </li>
+                <li>Ensured cleanliness and upkeep of swimming pool.</li>
+              </ul>
+            </section>
+          </li> -->
+          <!-- GSPGuard JUL 2018 - AUG 2018-->
+        </ul>
+     </div>
+   </div>
+    <!-- Experience -->
 
   <!-- Education -->
   <div class="ds-education-section">
@@ -132,7 +239,7 @@
           <section>
             <span class="ds-year">AUGUST 2019 - MAY 2023</span>
             <h3 class="ds-schoolname">Stony Brook University</h3>
-            <span class="ds-degree">Bachelor of Science in Computer Science</span>
+            <span class="ds-degree">Bachelor of Science in Computer Science, GPA: 3.59/4</span>
             <ul class="ds-course-list">
               <li>Software Engineering</li>
               <li>Principles of Database Systems</li>
@@ -153,7 +260,7 @@
           <section>
             <span class="ds-year">SEPTEMBER 2015 - JUNE 2019</span>
             <h3 class="ds-schoolname">Bronx High School of Science</h3>
-            <span class="ds-degree">Regent's Diploma</span>
+            <span class="ds-degree">Regent's Diploma, GPA: 3.77/4</span>
             <ul class="ds-course-list">
               <li>Computer Science Projects</li>
               <li>AP Computer Science</li>
@@ -214,83 +321,6 @@
   </div>
   <!-- Education -->
 
-   <!-- Experience -->
-   <div class="ds-experience-section">
-     <div class="container">
-        <h2 class="ds-heading">Work Experience</h2>
-        <ul class="timeline">
-          <li class="timeline-item mb-5">
-            <section>
-              <span class="ds-year">JUNE 2022 - Present</span>
-              <h3 class="ds-officename">IPVideo</h3>
-              <span class="ds-department">Software Engineer Intern</span>
-              <!-- <p>Remote, New York</p> -->
-              <ul style="list-style-type: disc; margin-top: 15px;">
-                <li>Collaborated with team members to maintain and develop a product line.</li>
-                <li>Worked on improving an existing code base.</li>
-                <li>Commited code via Sourcetree to track updates and allow for code review.</li>
-                <li>Participated in daily scrum meetings to discuss problems and solutions.</li>
-              </ul>
-            </section>
-          </li>
-      
-          <li class="timeline-item mb-5">
-            <section>
-              <span class="ds-year">JULY 2021 - MAY 2022</span>
-              <h3 class="ds-schoolname">Target</h3>
-              <span class="ds-department">General Merchandise Expert</span>
-              <ul style="list-style-type: disc; margin-top: 15px;">
-                <li>Ensured sales floor was full, in stock, and accurately signed.</li>
-                <li>Executed pulls and restocked products in the backroom efficiently.</li>
-                <li>Provided service and a shopping experience to meet the needs of a guest.</li>
-              </ul>
-            </section>
-          </li>
-
-          <li class="timeline-item mb-5">
-            <section>
-              <span class="ds-year">JULY 2020 - JULY 2020</span>
-              <h3 class="ds-schoolname">JP Morgan Chase & Co</h3>
-              <span class="ds-department">Fintech Focus Fellow</span>
-              <ul style="list-style-type: disc; margin-top: 15px;">
-                <li>Built full-stack web applications using the Flask web framework, MongoDB, Python, HTML, and CSS.</li>
-                <li>Developed and iterated upon prototypes and Minimum Viable Products (MVPs), which culminated in presentations of a final web application.</li>
-                <li>Used version control to keep track of changes and collaborate with colleagues.</li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-        <!-- <div class="row ds-experience-list">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2019 - Present</span>
-                <h3 class="ds-officename">Matrix Media Inc</h3>
-                <span class="ds-department">Full Stack developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                </ul>
-              </section>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2018 - 2019</span>
-                <h3 class="ds-officename">Lexind</h3>
-                <span class="ds-department">Senior app developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                </ul>
-              </section>
-            </div>
-        </div> -->
-     </div>
-   </div>
-    <!-- Experience -->
-
    <!--  Work -->
    <div class="ds-work-section">
      <div class="container">
@@ -300,13 +330,13 @@
               <div class="row">
                   <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
                       <section>
-                          <h3 class="ds-work-tilte">Top 5 Lister</h3>
-                          <p>Top 5 Lister is a place where users can create, like, dislike, and comment on top 5 lists of any topic. It features aggregrate lists to see the top ranked for any topic.</p>
+                          <h3 class="ds-work-tilte">Sheet2App</h3>
+                          <p>A Google AppSheet clone. Architectedd the entire frontend from scratch, implementing role-based access control, full CRUD record operations, dynamic table/detail views, session caching, and backend API routes.</p>
                           <a href="https://github.com/min-j/top5_lister_final" class="ds-button" target="_blank">View Repo</a>
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                      <figure><img src="assets/images/t5l.png"></figure>
+                      <figure><img src="assets/images/appsheet-ui-tweaks_0.jpg"></figure>
                   </div>
               </div>
             </div>
@@ -330,7 +360,7 @@
                       <section>
                           <h3 class="ds-work-tilte">Satiate</h3>
                           <p>Satiate is a Tinder-esque web application that helps users find a new restaurant. Explore different cuisine or look for a specific type. Swipe left to continue browsing restaurants and swipe right to view a restaurant's Yelp page.</p>
-                          <a href="works-setails.html" class="ds-button">View Repo</a>
+                          <a href="https://github.com/min-j/restaurant-finder" class="ds-button" target="_blank">View Repo</a>
                       </section>
                   </div>
                   <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
@@ -350,7 +380,7 @@
           <span>Get in Contact</span>
           <h4>Ready to talk?</h4>
           <p>Feel free to contact me</p>
-          <a href="mailto:jonathan.min@stonybrook.edu" class="ds-button">Lets Talk</a>
+          <a href="mailto:minjonathanmin@gmail.com" class="ds-button">Lets Talk</a>
         </section>
         <span class="ds-copyright">© 2022 All rights reserved. Bootstrap template provided by <a href="https://designstub.com/" target="_blank">Designstub</a>.</span>
      </div>
