@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 import { projects, ProjectItem } from '@/lib/data'
 import SectionHeader from '@/components/SectionHeader'
@@ -8,11 +8,12 @@ import { useReveal } from '@/hooks/useReveal'
 
 function ProjectCard({ project, delay }: { project: ProjectItem; delay: number }) {
   const ref = useReveal(delay)
+  const hasLiveDemo = !!project.liveUrl
 
   return (
     <div ref={ref} className="reveal">
       <a
-        href={project.github}
+        href={hasLiveDemo ? project.liveUrl : project.github}
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex rounded-lg border border-transparent p-5 transition-all duration-200 hover:border-edge hover:bg-surface"
@@ -39,10 +40,34 @@ function ProjectCard({ project, delay }: { project: ProjectItem; delay: number }
               ))}
             </div>
 
-            <span className="ml-auto flex items-center gap-1.5 text-[11px] font-mono text-muted transition-colors duration-200 group-hover:text-secondary">
-              <FaGithub className="h-3.5 w-3.5" />
-              GitHub
-            </span>
+            <div className="ml-auto flex items-center gap-3">
+              {hasLiveDemo && (
+                <span
+                  onClick={(e) => {
+                    e.preventDefault()
+                    e.stopPropagation()
+                    window.open(project.github, '_blank', 'noopener,noreferrer')
+                  }}
+                  className="flex cursor-pointer items-center gap-1.5 text-[11px] font-mono text-muted transition-colors duration-200 hover:text-secondary"
+                >
+                  <FaGithub className="h-3.5 w-3.5" />
+                  GitHub
+                </span>
+              )}
+              <span className="flex items-center gap-1.5 text-[11px] font-mono text-muted transition-colors duration-200 group-hover:text-secondary">
+                {hasLiveDemo ? (
+                  <>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    Live Demo
+                  </>
+                ) : (
+                  <>
+                    <FaGithub className="h-3.5 w-3.5" />
+                    GitHub
+                  </>
+                )}
+              </span>
+            </div>
           </div>
         </div>
       </a>

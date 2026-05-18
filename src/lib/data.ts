@@ -7,8 +7,14 @@ export const bio = {
   ],
 }
 
-export const skills = ['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Quasar', 'Vuex / Pinia', 'REST APIs', 'Git', 
-    'Python', 'Java', 'C# / .NET', 'AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Next.js']
+export const skillCategories: Record<string, string[]> = {
+  Languages:      ['TypeScript', 'JavaScript', 'HTML/CSS', 'Python', 'Java'],
+  Frontend:       ['React', 'Next.js', 'Vue.js', 'Quasar', 'Vuex', 'Pinia', 'Tailwind CSS', 'Bootstrap', 'Material UI'],
+  'Backend & APIs': ['REST APIs', 'C# / .NET', 'Node.js', 'Express', 'PostgreSQL', 'Flask', 'MongoDB', 'Firebase'],
+  Cloud:          ['AWS', 'Docker', 'Kubernetes'],
+  DevOps:         ['Serverless Framework', 'GitHub Actions', 'Vercel'],
+  Tools:          ['Git', 'Jest', 'Jira', 'Confluence', 'Agile/Scrum'],
+}
 
 
 export interface ExperienceItem {
@@ -75,6 +81,7 @@ export interface ProjectItem {
   description: string
   tech: string[]
   github: string
+  liveUrl?: string
 }
 
 export const projects: ProjectItem[] = [
@@ -91,6 +98,14 @@ export const projects: ProjectItem[] = [
       'Built a real-time market sentiment dashboard using a full RAG pipeline with dual-source news ingestion, vector embeddings, cosine similarity retrieval, and streaming LLM analysis to surface live Bullish/Bearish/Neutral readings for the three major US indices.',
     tech: ['Next.js', 'React', 'OpenAI API', 'Vercel AI SDK', 'Supabase pgVector', 'Finnhub API', 'Alpaca Markets API'],
     github: 'https://github.com/min-j/pulsecheck',
+    liveUrl: 'https://pulse-check-snowy.vercel.app',
+  },
+  {
+    title: 'Trading Notification System',
+    description:
+      'Backend API that receives trade events from automated trading bots, calculates PnL, and delivers daily Discord summaries. Relational PostgreSQL schema with aggregation queries, deployed serverless on AWS.',
+    tech: ['Node.js', 'Express', 'TypeScript', 'AWS Lambda', 'API Gateway', 'EventBridge', 'Neon PostgreSQL', 'Discord Webhooks', 'Jest'],
+    github: 'https://github.com/min-j/TNS',
   },
   {
     title: 'Sheet2App',
