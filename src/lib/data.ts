@@ -101,6 +101,13 @@ export const projects: ProjectItem[] = [
     liveUrl: 'https://pulse-check-snowy.vercel.app',
   },
   {
+    title: 'Aida',
+    description:
+      'LLM task assistant with a three-layer architecture: instant keyword parsing for edits, async background analysis for task grouping and staleness detection, and conversational queries with context injection. Engineered prompts for useful reasoning within a constrained 8B model.',
+    tech: ['Python', 'Ollama', 'Qwen3-8B', 'httpx'],
+    github: 'https://github.com/min-j/aida',
+  },
+  {
     title: 'Trading Notification System',
     description:
       'Backend API that receives trade events from automated trading bots, calculates PnL, and delivers daily Discord summaries. Relational PostgreSQL schema with aggregation queries, deployed serverless on AWS.',
